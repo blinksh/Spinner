@@ -9,10 +9,10 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/dominicegginton/Nanoseconds", from: "1.0.0"),
         .package(url: "https://github.com/onevcat/Rainbow", from: "3.0.0"),
-        .package(url: "https://github.com/IBM-Swift/BlueSignals.git", from: "1.0.0")
+//        .package(url: "https://github.com/IBM-Swift/BlueSignals.git", from: "1.0.0")
     ],
     targets: [
-        .target(name: "Spinner", dependencies: ["Nanoseconds","Rainbow", "Signals"]),
+        .target(name: "Spinner", dependencies: ["Nanoseconds","Rainbow"]),
         .testTarget(name: "SpinnerTests", dependencies: ["Spinner"]),
         .target(name: "Example", dependencies: ["Spinner"])
     ]

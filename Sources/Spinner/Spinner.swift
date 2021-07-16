@@ -2,7 +2,7 @@ import Foundation
 import Nanoseconds
 import Dispatch
 import Rainbow
-import Signals
+//import Signals
 
 struct StdOutSpinnerUI: SpinnerUI {
     public func display(string: String) {
@@ -78,10 +78,10 @@ public final class Spinner {
         self.queue = DispatchQueue(label: "io.Swift.Spinner")
         self.ui = ui ?? StdOutSpinnerUI()
 
-        Signals.trap(signal: .int) { _ in
-            print("\u{001B}[?25h", terminator: "")
-            exit(0)
-        }
+        // Signals.trap(signal: .int) { _ in
+        //     print("\u{001B}[?25h", terminator: "")
+        //     exit(0)
+        //  }
     }
 
     /**
